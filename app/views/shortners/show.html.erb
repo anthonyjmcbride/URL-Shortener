@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Longurl:</strong>
+  <%= @shortner.longurl %>
+</p>
+
+<p>
+  <strong>Shorturl:</strong>
+  <%= link_to @shortner.shorturl, @shortner.longurl %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @shortner.active %>
+</p>
+
+
+ <button><%= link_to 'Edit', edit_shortner_path(@shortner) %></button> |
+<button><%= link_to 'Back', shortners_path %></button>
