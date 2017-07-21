@@ -1,3 +1,7 @@
+<div class="form-page">
+
+
+
 <%= form_with(model: shortner, local: true) do |form| %>
   <% if shortner.errors.any? %>
     <div id="error_explanation">
@@ -30,3 +34,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
+</div>
