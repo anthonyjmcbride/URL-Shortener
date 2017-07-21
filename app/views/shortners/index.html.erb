@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Shortners</h1>
+<h1 class="overlap" >Shortners</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= shortner.longurl %></td>
         <td><%= link_to shortner.shorturl, shortner.longurl %></td>
-        <td><button><%= link_to 'Show', shortner %></button></td>
-        <td><button><%= link_to 'Edit', edit_shortner_path(shortner) %></button></td>
-        <td><button><%= link_to 'Destroy', shortner, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><%= link_to 'Show', shortner, class: 'show-button' %></td>
+        <td><%= link_to 'Edit', edit_shortner_path(shortner), class: 'edit-button' %></td>
+        <td><%= link_to 'Delete', shortner, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<button><%= link_to 'New Shortner', new_shortner_path %></button>
+<%= link_to 'New Shortner', new_shortner_path, class: 'new-button' %>
