@@ -1,10 +1,9 @@
 <div class="new-page">
 
+  <h1>New Shortner</h1>
 
-<h1>New Shortner</h1>
+  <%= render 'form', shortner: @shortner %>
 
-<%= render 'form', shortner: @shortner %>
-
-<%= link_to 'Back', shortners_path, class: 'back-button' %>
+  <%= link_to 'Back', shortners_path, class: 'back-button' %>
 
 </div>

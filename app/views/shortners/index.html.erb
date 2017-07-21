@@ -1,39 +1,39 @@
 <div class="index-page">
 
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <h1>URL Shortner</h1>
 
-<h1>URL Shortner</h1>
-
-<div class="table-div">
-  <table>
-    <thead>
-      <tr>
-        <th class="longurl">Longurl</th>
-        <th class="shorturl">Shorturl</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-
-    <div class="table-content">
-      <tbody>
-        <% @shortners.each do |shortner| %>
+    <div class="table-div">
+      <table>
+        <thead>
           <tr>
-            <td class="longurl-link"><%= shortner.longurl %></td>
-            <td class="shorturl-link"><%= link_to shortner.shorturl, shortner.longurl %></td>
-            <td><%= link_to 'Show', shortner, class: 'show-button' %></td>
-            <td><%= link_to 'Edit', edit_shortner_path(shortner), class: 'edit-button' %></td>
-            <td><%= link_to 'Delete', shortner, method: :delete, data: { confirm: 'Are you sure you want to delete this url?' }, class: 'delete-button' %></td>
+            <th class="longurl">Longurl</th>
+            <th class="shorturl">Shorturl</th>
+            <th colspan="3"></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</div>
+        </thead>
 
-<br>
-  <div class="new-button-index-page clearfix">
-    <%= link_to 'New Shortner', new_shortner_path, class: 'new-button' %>
-  </div>
+
+        <div class="table-content">
+          <tbody>
+            <% @shortners.each do |shortner| %>
+              <tr>
+                <td class="longurl-link"><%= shortner.longurl %></td>
+                <td class="shorturl-link"><%= link_to shortner.shorturl, shortner.longurl %></td>
+                <td><%= link_to 'Show', shortner, class: 'show-button' %></td>
+                <td><%= link_to 'Edit', edit_shortner_path(shortner), class: 'edit-button' %></td>
+                <td><%= link_to 'Delete', shortner, method: :delete, data: { confirm: 'Are you sure you want to delete this url?' }, class: 'delete-button' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <br>
+      <div class="new-button-index-page clearfix">
+        <%= link_to 'New Shortner', new_shortner_path, class: 'new-button' %>
+      </div>
+      
 </div>
