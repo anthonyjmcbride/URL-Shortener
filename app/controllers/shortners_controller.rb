@@ -29,7 +29,7 @@ class ShortnersController < ApplicationController
 
     respond_to do |format|
       if @shortner.save
-        format.html { redirect_to @shortner, notice: 'Shortner was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Shortner was successfully created.' }
         format.json { render :show, status: :created, location: @shortner }
       else
         format.html { render :new }
