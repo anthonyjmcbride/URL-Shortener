@@ -10,6 +10,7 @@ class ShortnersController < ApplicationController
   # GET /shortners/1
   # GET /shortners/1.json
   def show
+    redirect_to @shortner.longurl
   end
 
   # GET /shortners/new
