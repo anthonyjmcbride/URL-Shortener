@@ -43,7 +43,7 @@ class ShortnersController < ApplicationController
   def update
     respond_to do |format|
       if @shortner.update(shortner_params)
-        format.html { redirect_to @shortner, notice: 'Shortner was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Shortner was successfully updated.' }
         format.json { render :show, status: :ok, location: @shortner }
       else
         format.html { render :edit }
